@@ -15,7 +15,7 @@ const theme = {
   light: {
     color: '#222831',
     background: 'white',
-    header: '#af0404',
+    header: '#dd2c00',
   },
 };
 

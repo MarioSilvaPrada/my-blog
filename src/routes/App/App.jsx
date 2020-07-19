@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Switch from 'components/Switch';
+import data from 'data';
+import Header from 'components/Header';
 import * as S from './App.styled';
 
 const App = () => {
@@ -8,22 +9,21 @@ const App = () => {
   return (
     <S.Container isLightMode={isLightMode}>
       <S.Wrapper>
-        <S.Header>
-          <S.Title isLightMode={isLightMode}>
-            Prada Codes
-            {' '}
-            <span role="img" aria-label="poo">💩</span>
-          </S.Title>
-          <Switch checked={isLightMode} onChange={() => setIsLightMode(!isLightMode)} />
-        </S.Header>
-
-        <div>
+        <Header isLightMode={isLightMode} setIsLightMode={setIsLightMode} />
+        <S.PersonalInfo>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ex corporis
             doloribus necessitatibus quam illum, nam tenetur, iste, dicta molestiae possimus atque
             distinctio similique dolore impedit? Non impedit magni corrupti.
           </p>
-        </div>
+        </S.PersonalInfo>
+        {data.map(({ title, date, description }) => (
+          <S.ArticleContainer isLightMode={isLightMode}>
+            <h1>{title}</h1>
+            <p>{description}</p>
+            <p>{date}</p>
+          </S.ArticleContainer>
+        ))}
       </S.Wrapper>
     </S.Container>
   );
