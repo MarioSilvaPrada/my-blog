@@ -9,7 +9,11 @@ const App = () => {
     <S.Container isLightMode={isLightMode}>
       <S.Wrapper>
         <S.Header>
-          <S.Title isLightMode={isLightMode}>Prada Codes</S.Title>
+          <S.Title isLightMode={isLightMode}>
+            Prada Codes
+            {' '}
+            <span role="img" aria-label="poo">💩</span>
+          </S.Title>
           <Switch checked={isLightMode} onChange={() => setIsLightMode(!isLightMode)} />
         </S.Header>
 
