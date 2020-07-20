@@ -4,7 +4,8 @@ import * as S from './Intro.styled';
 const Intro = () => (
   <S.PersonalInfo>
     <p>
-      Hey, I&apos;m{' '}
+      Hey, I&apos;m
+      {' '}
       <S.ExternalLink href="https://mariosilvaprada.com/" target="blank">
         Mário Prada
       </S.ExternalLink>
