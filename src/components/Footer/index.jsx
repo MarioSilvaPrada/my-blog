@@ -12,7 +12,8 @@ const Footer = () => (
       ))}
     </S.IconsWrapper>
     <S.Copy>
-      © {' '}
+      ©
+      {' '}
       {new Date().getFullYear()}
       {' '}
       Mário Prada
