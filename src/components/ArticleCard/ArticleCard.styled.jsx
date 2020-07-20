@@ -9,7 +9,7 @@ display: block;
 `;
 
 export const ArtTitle = styled.h1`
-font-size: ont-size: ${({ theme }) => theme.fontSize.big};
+font-size: ${({ theme }) => theme.fontSize.big};
 margin-bottom: .6rem;
 `;
 
