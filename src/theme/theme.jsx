@@ -2,7 +2,7 @@ const theme = {
   fontSize: {
     small: '.8rem',
     medium: '1rem',
-    big: '1.4rem',
+    big: '2rem',
   },
   size: {
     maxWidth: '42.5rem',

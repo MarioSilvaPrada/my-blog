@@ -5,9 +5,12 @@ const ArticleCard = ({
   route, date, title, description,
 }) => (
   <S.ArticleContainer to={route}>
-    <S.ArtTitle>{title}</S.ArtTitle>
+    <S.HeaderWrapper>
+      <S.ArtTitle>{title}</S.ArtTitle>
+      <S.Date>{date}</S.Date>
+    </S.HeaderWrapper>
+
     <S.Description>{description}</S.Description>
-    <S.Date>{date}</S.Date>
     <div className="line" />
   </S.ArticleContainer>
 );

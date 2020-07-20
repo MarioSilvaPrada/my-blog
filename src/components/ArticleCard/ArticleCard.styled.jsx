@@ -9,18 +9,24 @@ display: block;
 `;
 
 export const ArtTitle = styled.h1`
-font-size: 1.2rem;
+font-size: ont-size: ${({ theme }) => theme.fontSize.big};
 margin-bottom: .6rem;
 `;
 
 export const Date = styled.p`
-font-size: .7rem;
-font-weight: bold;
-margin-bottom: .3rem;
+  font-size: ${({ theme }) => theme.fontSize.small};
+  font-weight: bold;
+  margin-bottom: .3rem;
 `;
 
 export const Description = styled.p`
-font-size: 1rem;
-font-weight: 500;
-margin-bottom: .5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: .5rem;
+`;
+
+export const HeaderWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
