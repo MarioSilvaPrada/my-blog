@@ -9,7 +9,7 @@ const Hoist = () => {
       veritatis rem id? Voluptates eaque nisi veniam numquam porro.
     </p>
   );
-  return <ArticlePage content={content} />;
+  return <ArticlePage title="Hoisting" content={content} />;
 };
 
 export default Hoist;

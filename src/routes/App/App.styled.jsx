@@ -25,7 +25,7 @@ const getTheme = (isLight, theme) => `
       border: none;
       cursor: pointer;
       color: ${isLight ? theme.light.color : theme.dark.color};
-      font-size: ${() => theme.fontSize.small};
+      font-size: ${theme.fontSize.small};
       transition: .5s;
     }
   `;
