@@ -12,6 +12,22 @@ const getTheme = (isLight, theme) => `
     h6 {
       color: ${isLight ? theme.light.header : theme.dark.header};
     }
+
+   .line {
+      border-bottom: 2px solid ${isLight ? theme.light.header : theme.dark.header};
+      width: 100%;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: ${isLight ? theme.light.color : theme.dark.color};
+      font-size: .8rem;
+      transition: .5s;
+    }
   `;
 
 export const Container = styled.div`
@@ -24,16 +40,4 @@ export const Wrapper = styled.div`
   max-width: ${({ theme }) => theme.size.maxWidth};
   margin: 0 auto;
   padding: 3rem 0;
-`;
-
-export const PersonalInfo = styled.div`
-  margin-bottom: 3rem;
-`;
-
-export const ArticleContainer = styled.div`
-  border-bottom: 2px solid
-    ${({ isLightMode, theme }) => (isLightMode ? theme.light.header : theme.dark.header)};
-  margin-bottom: 1.2rem;
-  padding-bottom: .5rem;
-  cursor: pointer;
 `;

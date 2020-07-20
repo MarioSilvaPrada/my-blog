@@ -1,31 +1,30 @@
 import React, { useState } from 'react';
-import data from 'data';
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from 'components/Header';
+
+// Pages
+import Home from 'routes/Home';
+import Hoist from 'routes/Articles/01_myFirstArticle';
+import PageNotFound from 'routes/PageNotFound/PageNotFound';
 import * as S from './App.styled';
 
 const App = () => {
   const [isLightMode, setIsLightMode] = useState(true);
 
   return (
-    <S.Container isLightMode={isLightMode}>
-      <S.Wrapper>
-        <Header isLightMode={isLightMode} setIsLightMode={setIsLightMode} />
-        <S.PersonalInfo>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ex corporis
-            doloribus necessitatibus quam illum, nam tenetur, iste, dicta molestiae possimus atque
-            distinctio similique dolore impedit? Non impedit magni corrupti.
-          </p>
-        </S.PersonalInfo>
-        {data.map(({ title, date, description }) => (
-          <S.ArticleContainer isLightMode={isLightMode}>
-            <h1>{title}</h1>
-            <p>{description}</p>
-            <p>{date}</p>
-          </S.ArticleContainer>
-        ))}
-      </S.Wrapper>
-    </S.Container>
+    <Router>
+      <S.Container isLightMode={isLightMode}>
+        <S.Wrapper>
+          <Header isLightMode={isLightMode} setIsLightMode={setIsLightMode} />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/article" component={Hoist} />
+            <Route path="*" component={PageNotFound} />
+          </Switch>
+        </S.Wrapper>
+      </S.Container>
+    </Router>
   );
 };
 
