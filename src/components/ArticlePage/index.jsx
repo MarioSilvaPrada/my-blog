@@ -12,7 +12,7 @@ const ArticlePage = ({ title, content }) => {
         <S.Button onClick={() => history.goBack()}>
           <IoIosArrowBack />
           {' '}
-          Go Back
+          Go back
         </S.Button>
       </S.ArticleHeader>
       {content}

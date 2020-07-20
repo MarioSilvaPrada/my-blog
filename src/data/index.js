@@ -4,8 +4,8 @@ const format = 'DD/MM/YYYY';
 
 const articles = [
   {
-    route: 'article',
-    title: 'My first article',
+    route: 'hoisting',
+    title: 'Hoisting',
     description: 'this is going to be my first article',
     date: moment('19/07/2020', format).format('MMMM Do YYYY'),
   },

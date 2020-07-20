@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from 'components/Header';
+import Footer from 'components/Footer';
 
 // Pages
 import Home from 'routes/Home';
@@ -19,9 +20,10 @@ const App = () => {
           <Header isLightMode={isLightMode} setIsLightMode={setIsLightMode} />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/article" component={Hoist} />
+            <Route exact path="/hoisting" component={Hoist} />
             <Route path="*" component={PageNotFound} />
           </Switch>
+          <Footer />
         </S.Wrapper>
       </S.Container>
     </Router>
