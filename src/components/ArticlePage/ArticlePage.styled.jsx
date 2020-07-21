@@ -5,10 +5,6 @@ export const TitlePage = styled.h1`margin-bottom: .8rem;`;
 export const Button = styled.button`
   margin-bottom: .5rem;
   font-weight: bold;
-
-  &:hover {
-      transform: translateX(-.2rem)
-  }
 `;
 
 export const ArticleHeader = styled.div`

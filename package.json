@@ -21,9 +21,9 @@
     "dotenv-webpack": "^1.8.0",
     "moment": "^2.27.0",
     "react": "^16.13.1",
-    "react-code-blocks": "^0.0.8",
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
+    "react-markdown": "^4.3.1",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.1.1"
   },

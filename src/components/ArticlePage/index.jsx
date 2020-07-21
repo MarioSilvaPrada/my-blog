@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { IoIosArrowBack } from 'react-icons/io';
+import { AiFillHome } from 'react-icons/ai';
 import * as S from './ArticlePage.styled';
 
 const ArticlePage = ({ title, content }) => {
@@ -9,10 +9,8 @@ const ArticlePage = ({ title, content }) => {
     <div>
       <S.ArticleHeader>
         <S.TitlePage>{title}</S.TitlePage>
-        <S.Button onClick={() => history.goBack()}>
-          <IoIosArrowBack />
-          {' '}
-          Go back
+        <S.Button onClick={() => history.push('/')}>
+          <AiFillHome style={{marginRight: '.3rem'}}/>  Homepage
         </S.Button>
       </S.ArticleHeader>
       {content}

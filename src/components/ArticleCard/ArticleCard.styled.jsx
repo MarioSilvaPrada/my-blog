@@ -15,7 +15,6 @@ margin-bottom: .6rem;
 
 export const Date = styled.p`
   font-size: ${({ theme }) => theme.fontSize.small};
-  font-weight: bold;
   margin-bottom: .3rem;
 `;
 
