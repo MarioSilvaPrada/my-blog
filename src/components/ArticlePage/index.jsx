@@ -10,7 +10,9 @@ const ArticlePage = ({ title, content }) => {
       <S.ArticleHeader>
         <S.TitlePage>{title}</S.TitlePage>
         <S.Button onClick={() => history.push('/')}>
-          <AiFillHome style={{marginRight: '.3rem'}}/>  Homepage
+          <AiFillHome style={{ marginRight: '.3rem' }} />
+          {' '}
+          Homepage
         </S.Button>
       </S.ArticleHeader>
       {content}

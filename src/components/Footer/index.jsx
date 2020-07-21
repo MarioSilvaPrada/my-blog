@@ -11,7 +11,12 @@ const Footer = () => (
         </S.Icon>
       ))}
     </S.IconsWrapper>
-    <S.Copy>© {new Date().getFullYear()} Mário Prada</S.Copy>
+    <S.Copy>
+      ©
+      {new Date().getFullYear()}
+      {' '}
+      Mário Prada
+    </S.Copy>
   </S.FooterContainer>
 );
 
