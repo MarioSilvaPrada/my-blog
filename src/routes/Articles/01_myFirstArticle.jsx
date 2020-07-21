@@ -1,14 +1,11 @@
 import React from 'react';
 import ArticlePage from 'components/ArticlePage';
+import ReactMarkdown from 'react-markdown';
+import Hoisting from 'pages/hoisting/index.md';
 
 const Hoist = () => {
-  const content = (
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure quae quibusdam, quam
-      consequatur mollitia voluptatibus voluptatem recusandae assumenda dolor fuga, dolorum
-      veritatis rem id? Voluptates eaque nisi veniam numquam porro.
-    </p>
-  );
+  const content = <ReactMarkdown source={Hoisting} escapeHtml={false} />;
+
   return <ArticlePage title="Hoisting" content={content} />;
 };
 

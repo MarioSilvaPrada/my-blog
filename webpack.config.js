@@ -5,12 +5,12 @@ const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: {
-    index: './src/index.js',
+    index: './src/index.js'
   },
   output: {
     path: `${__dirname}/dist`,
     publicPath: '/',
-    filename: '[name].js',
+    filename: '[name].js'
   },
   resolve: {
     alias: {
@@ -19,19 +19,20 @@ module.exports = {
       assets: path.resolve(__dirname, './src/assets'),
       theme: path.resolve(__dirname, './src/theme'),
       data: path.resolve(__dirname, './src/data'),
+      pages: path.resolve(__dirname, './src/pages')
     },
-    extensions: [ '.js', '.jsx', '.ts', '.tsx', '.css' ],
+    extensions: [ '.js', '.jsx', '.ts', '.tsx', '.css' ]
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         include: path.resolve(__dirname, 'src'),
-        use: [ 'babel-loader' ],
+        use: [ 'babel-loader' ]
       },
       {
         test: /\.css$/i,
-        use: [ 'style-loader', 'css-loader' ],
+        use: [ 'style-loader', 'css-loader' ]
       },
       {
         test: /\.m?js$/,
@@ -39,35 +40,49 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [ '@babel/preset-env' ],
-          },
-        },
+            presets: [ '@babel/preset-env' ]
+          }
+        }
       },
       {
         test: /\.(png|svg|jpg|gif|jpeg|ttf|otf|eot)$/,
-        use: [ 'file-loader' ],
+        use: [ 'file-loader' ]
       },
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
-    ],
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'html-loader'
+          },
+          {
+            loader: 'markdown-loader',
+            options: {
+              /* your options here */
+            }
+          }
+        ]
+      }
+    ]
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
     historyApiFallback: true,
-    port: 9000,
+    port: 9000
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/index.html', //source html
+      template: 'src/index.html' //source html
     }),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
     }),
     new Dotenv({
-      path: './.env',
-    }),
-  ],
+      path: './.env'
+    })
+  ]
 };
