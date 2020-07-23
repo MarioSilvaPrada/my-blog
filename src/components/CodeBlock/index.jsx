@@ -9,4 +9,3 @@ const CodeBlock = ({ language, value }) => (
 );
 
 export default CodeBlock;
-
