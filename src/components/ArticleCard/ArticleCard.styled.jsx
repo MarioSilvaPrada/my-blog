@@ -9,8 +9,8 @@ display: block;
 `;
 
 export const ArtTitle = styled.h1`
-font-size: ${({ theme }) => theme.fontSize.big};
-margin-bottom: .6rem;
+  font-size: ${({ theme }) => theme.fontSize.title};
+  margin-bottom: .6rem;
 `;
 
 export const Date = styled.p`

@@ -9,7 +9,6 @@ cta: 'react'
 
 
 <pre>
-
   function Counter() {
       const [count, setCount] = useState(0);
       
@@ -22,6 +21,6 @@ cta: 'react'
         </div>
       );
     }
+    
 </pre>
 
-<pre><p>paragraph tag</p></pre>
