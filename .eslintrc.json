@@ -27,5 +27,6 @@
         "paths": [ "src" ]
       }
     }
-  }
+  },
+  "parser": "babel-eslint"
 }

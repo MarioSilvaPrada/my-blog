@@ -6,7 +6,11 @@ import CodeBlock from 'components/CodeBlock';
 
 const Hoist = () => {
   const content = (
-    <ReactMarkdown source={Hoisting} escapeHtml={false} renderers={{ code: CodeBlock }} />
+    <ReactMarkdown
+      source={Hoisting}
+      escapeHtml={false}
+      renderers={{ code: CodeBlock }}
+    />
   );
 
   return <ArticlePage title="Hoisting" content={content} />;

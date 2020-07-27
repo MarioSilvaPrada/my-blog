@@ -1,26 +1,30 @@
-## Title
+# Live demo
 
----
-title: A Complete Guide to useEffect
-date: '2019-03-09'
-spoiler: Effects are a part of your data flow.
-cta: 'react'
----
+Changes are automatically rendered as you type.
 
+## Table of Contents
 
-<pre>
-  function Counter() {
-      const [count, setCount] = useState(0);
-      
-      return (
-        <div>
-          <p>You clicked {count} times</p>
-          <button onClick={() => setCount(count + 1)}>
-            Click me
-          </button>
-        </div>
-      );
-    }
-    
-</pre>
+* Implements [GitHub Flavored Markdown](https://github.github.com/gfm/)
+* Renders actual, "native" React DOM elements
+* Allows you to escape or skip HTML (try toggling the checkboxes above)
+* If you escape or skip the HTML, no `dangerouslySetInnerHTML` is used! Yay!
+
+## How about some code?
+```jsx
+var React = require('react');
+var Markdown = require('react-markdown');
+
+React.render(
+  <Markdown source="# Your markdown here" />,
+  document.getElementById('content')
+);
+```
+
+## Tables?
+
+| Feature   | Support |
+| --------- | ------- |
+| tables    | ✔ |
+| alignment | ✔ |
+| wewt      | ✔ |
 
